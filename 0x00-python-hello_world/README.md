@@ -9,3 +9,7 @@
 
 #Task 3 - python code to print an integer
 
+#Task 4 - python code to print a float
+
+#Task 5 - 
+
