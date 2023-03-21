@@ -12,7 +12,8 @@ if __name__ == '__main__':
     cur = db.cursor()
     cur.execute("SELECT * \
     FROM states \
-    WHERE `name` \
+    WHERE CONVERT(`name` USING Latin1) \
+    COLLATE Latin1_General_CS \
     LIKE 'N%';")
     states = cur.fetchall()
 
