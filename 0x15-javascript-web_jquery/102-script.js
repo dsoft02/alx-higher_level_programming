@@ -1,9 +1,8 @@
-const $ = window.$;
-const url = 'https://fourtonfish.com/hellosalut/?lang=';
-$(this).ready(function () {
-  $('INPUT#btn_translate').on('click', function () {
-    $.getJSON(url + $('INPUT#language_code').val(), function (data) {
-      $('DIV#hello').text(data.hello);
+$(document).ready(function () {
+  $('#btn_translate').click(function () {
+    const languageCode = $('#language_code').val();
+    $.get(`https://www.fourtonfish.com/hellosalut/hello/${languageCode}`, function (data) {
+      $('#hello').text(data.hello);
     });
   });
 });
